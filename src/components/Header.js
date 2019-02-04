@@ -1,17 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
+import './Header.css';
 
-export class Header extends Component {
-  render() {
-    return (
-      <div>
-        <header>
-          <h3>WHAT?</h3>
-          <h3>+ NEW GAME</h3>
-          <h1>HOT or COLD</h1>
-        </header>
-      </div>
-    )
-  }
+export default function Header(props) {
+  return (
+    <div>
+      <header>
+        <div id="what"><a href="#what">WHAT?</a></div>
+        <div id="newgame"><a href="#newgame" onClick={() => props.onRestartGane()}>+ NEW GAME</a></div>
+        <div id="hotorcold">HOT or COLD</div>
+      </header>
+    </div>
+  )
 }
-
-export default Header

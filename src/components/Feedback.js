@@ -1,13 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class Feedback extends Component {
-  render() {
-    return (
-      <div>
-        <p>This is where the Feedback will go</p>
-      </div>
-    )
+export default function Feedback(props) {
+  const key = props.guessCount;
+
+  let guessAgain;
+  if (key !== 0) {
+    guessAgain = <span className="visuallyhidden">Guess again!</span>;
   }
+  return (
+    <h2 
+      key={key}
+      id="feedback"
+    >
+      {props.feedback} {guessAgain}
+    </h2>
+  );
 }
-
-export default Feedback

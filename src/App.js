@@ -3,7 +3,7 @@ import './App.css';
 
 import Header from './components/Header';
 import GuessContainer from './components/GuessContainer';
-import Feedback from './components/Feedback';
+import StatusSection from './components/StatusSection';
 
 
 class App extends Component {
@@ -12,9 +12,16 @@ class App extends Component {
     this.state = {
       guesses: [],
       feedback: 'Make your guess!',
-      auralStatus: '',
       correctAnswer: Math.floor(Math.random() * 100) + 1
     };
+  }
+
+  restartGame() {
+    this.setState({
+      guesses: [],
+      feedback: 'Make your guess!',
+      correctAnswer: Math.floor(Math.random() * 100) + 1
+    });
   }
 
   makeGuess(guess) {
@@ -43,16 +50,25 @@ class App extends Component {
       feedback,
       guesses: [...this.state.guesses, guess]
     });
-}
+  }
 
   render() {
+    const {feedback, guesses} = this.state;
+    const guessCount = guesses.length;
+
     return (
       <div>
-        <Header />
+        <Header onRestartGame={() => this.restartGame()} />
         <main>
-          <GuessContainer />
+          <GuessContainer
+            guessCount={guessCount} 
+            onMakeGuess={guess => this.makeGuess(guess)}
+            feedback={feedback} 
+          />
+          <StatusSection
+            guesses={guesses}
+          />
         </main>
-        <Feedback />
       </div>
     );
   }
@@ -62,7 +78,10 @@ export default App;
 
 
 //APP STRUCTURE
-//App.js
+//|>App.js
 //|-> Header.js
+//|--> Nav.js
 //|-> GuessContainer.js
+//|--> Feedback.js
+//|--> GuessForm.js
 //|-> Feedback.js

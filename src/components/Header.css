@@ -1,0 +1,8 @@
+#newgame {
+  float: right;
+}
+
+#hotorcold {
+  display: flex;
+  justify-content: center;
+}

@@ -1,20 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
+import './GuessContainer.css';
 
-export class GuessContainer extends Component {
-  render() {
-    return (
-      <div>
-        <section>
-          <form>
-            <label>Make your Guess!</label>
-            <input type="text" placeholder="Enter your Guess" />
-            <button type="submit">Guess</button>
-          </form>
-          <p>Guess #!</p>
-        </section>
-      </div>
-    )
-  }
+import Feedback from './Feedback';
+import GuessForm from './GuessForm';
+
+export default function GuessContainer(props) {
+  const { feedback, guessCount } = props;
+  return (
+    <section>
+      <Feedback feedback={feedback} guessCount={guessCount} />
+      <GuessForm onMakeGuess={guess => props.onMakeGuess(guess)} />
+    </section>
+  );
 }
-
-export default GuessContainer
