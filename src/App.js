@@ -81,7 +81,11 @@ export default App;
 //|>App.js
 //|-> Header.js
 //|--> Nav.js
+
 //|-> GuessContainer.js
 //|--> Feedback.js
 //|--> GuessForm.js
-//|-> Feedback.js
+
+//|-> StatusSection.js
+//|--> GuessCount.js
+//|--> GuessList.js

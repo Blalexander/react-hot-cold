@@ -5,9 +5,9 @@ export default function Header(props) {
   return (
     <div>
       <header>
-        <div id="what"><a href="#what">WHAT?</a></div>
-        <div id="newgame"><a href="#newgame" onClick={() => props.onRestartGane()}>+ NEW GAME</a></div>
-        <div id="hotorcold">HOT or COLD</div>
+        <div><a href="#what" id="what">WHAT?</a></div>
+        <div><a href="#newgame" id="newgame" onClick={() => props.onRestartGame()}>+ NEW GAME</a></div>
+        <h1 id="hotorcold">HOT or COLD</h1>
       </header>
     </div>
   )

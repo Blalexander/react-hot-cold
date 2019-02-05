@@ -1,0 +1,26 @@
+#guessCount {
+  background-color: #394264;
+  width: 30%;
+  padding-bottom: 4vh;
+  font-size: 150%;
+}
+
+.guessBox {
+  background-color: #11a8ab;
+  width: 30%;
+  height: 10vh;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  background-color: #1a4e95;
+  border-radius: 5px;
+  margin-top: 3vh;
+  height: 3vh;
+  width: 3vw;
+  margin-left: 1vw;
+}

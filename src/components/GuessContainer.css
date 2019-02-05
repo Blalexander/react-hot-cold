@@ -1,24 +1,40 @@
 section {
-  height: 60vh;
-  width: 100%;
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
-  border: 1px solid black;
 }
 
 form {
-  border: 1px solid red;
-  height: 100%;
-  width: 25vw;
+  background-color: #394264;
+  height: 30vh;
+  width: 30%;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
   text-align: center;
-  /* justify-content: space-between; */
 }
 
 label {
   background-color: red;
   color: white;
   height: 20%;
+}
+
+input {
+  background-color: #50597b;
+  border: none;
+  height: 7vh;
+  width: 70%;
+  text-align: center;
+  font-size: 150%;
+}
+
+button {
+  font-size: 150%;
+  color: #95a5a6;
+  height: 7vh;
+  width: 70%;
+  background-color: #1f253d;
+  border: none;
 }

@@ -1,8 +1,26 @@
-#newgame {
-  float: right;
+* {
+  color: white;
 }
 
-#hotorcold {
-  display: flex;
-  justify-content: center;
+header {
+  height: 20vh;
+}
+
+#what {
+  color: white;
+  float: left;
+  font-size: xx-large;
+}
+
+#newgame {
+  color: white;
+  float: right;
+  font-size: xx-large;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 3em;
+  padding: 0.8em;
+  color: #fff;
 }

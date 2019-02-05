@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Feedback.css';
+
 export default function Feedback(props) {
   const key = props.guessCount;
 
